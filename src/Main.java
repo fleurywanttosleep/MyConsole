@@ -8,12 +8,13 @@ public class Main {
 
             JFrame f = new JFrame("Me Panel");
             f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            Component MyPanel = new MyPanel();
-           
-            f.add(MyPanel);
+            MyPanel myPanel = new MyPanel();
+            myPanel.setSymbols("1, 2, 3");
+            f.add(myPanel);
             f.pack();
-            
+            f.setLocationRelativeTo(null);
             f.setVisible(true);
 
         }
     }
+    
