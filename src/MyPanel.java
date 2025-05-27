@@ -7,6 +7,7 @@ public class MyPanel extends JPanel {
     public MyPanel() {
         setBorder(BorderFactory.createLineBorder(Color.black));
     }
+
     @Override
     public Dimension getPreferredSize() {
         return new Dimension(1560, 700);
@@ -22,9 +23,9 @@ public class MyPanel extends JPanel {
     
     private int step = 30;
 
-    private int delta = 5;
+    private int delta = 3;
 
-    private ArrayList<Rectangle> outlList = new ArrayList<Rectangle>();
+    private ArrayList<Rectangle> outlList = new ArrayList< >();
 
     
     public void setSymbols(String parm) {
@@ -81,9 +82,29 @@ public class MyPanel extends JPanel {
 
         // Draw Text
         //g.drawString("This is my custom Panel!", 10,20);
-        for (Rectangle rect : outlList) {
-             g.drawLine(x,y,width,height);
+        for (Rectangle rect:outlList) {
+             g.drawLine(rect.x,rect.y,rect.width,rect.height);
         }
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+    
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setStep(int step) {
+        this.step = step;
     }
 
 } 
