@@ -25,7 +25,7 @@ public class Main {
 
         // Создаем MyPanel один раз в начале
         MyPanel myPanel = new MyPanel();
-        myPanel.setSymbols("1, 2, 3");
+        myPanel.setSymbol("1, 2, 3");
         f.add(myPanel); // Добавляем myPanel в окно
         f.pack(); //  Вызываем pack перед setLocationRelativeTo()
         f.setLocationRelativeTo(null);
@@ -55,7 +55,7 @@ public class Main {
                     myPanel.setWidth(koords[2]);
                     myPanel.setHeight(koords[3]);
                     myPanel.setStep(koords[4]);
-                    myPanel.setSymbols(numbers.getText());
+                    myPanel.setSymbol(numbers.getText());
                     myPanel.repaint(); //Перерисовываем панель, чтобы показать результат
 
                 } catch (NumberFormatException ex) {
